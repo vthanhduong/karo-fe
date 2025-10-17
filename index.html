@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>karo brother-hút</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!--mày ngó cái lồn gì?-->
+  <body>
+    <div id="app">
+      <section id="login-screen" class="screen">
+        <div class="panel">
+          <h1>karo brother-hút</h1>
+          <p class="subtitle">Chọn một tên hiển thị để vào lobby.</p>
+          <form id="login-form">
+            <input id="name-input" type="text" maxlength="20" placeholder="Nhập tên (3-20 ký tự)" autocomplete="off" required />
+            <button type="submit">Vào</button>
+            <p id="login-error" class="error"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="lobby-screen" class="screen hidden">
+        <header class="toolbar">
+          <div>
+            <h2>Lobby</h2>
+            <p id="self-label"></p>
+          </div>
+          <button id="logout-button" class="secondary">quăng game</button>
+        </header>
+        <div class="lobby-layout">
+          <div class="lobby-controls">
+            <input id="search-input" type="text" placeholder="Tìm người chơi" autocomplete="off" />
+          </div>
+          <ul id="user-list" class="user-list"></ul>
+        </div>
+      </section>
+
+      <section id="game-screen" class="screen hidden">
+        <header class="toolbar">
+          <div>
+            <h2>Ván đấu</h2>
+            <p id="game-status"></p>
+          </div>
+          <button id="leave-game-button" class="secondary">Đầu hàng</button>
+        </header>
+        <div class="game-layout">
+          <div id="board" class="board-grid" role="grid" aria-label="Bàn cờ caro"></div>
+          <aside class="sidebar">
+            <div class="player-card" data-mark="x">
+              <span class="mark">X</span>
+              <div class="info">
+                <p class="name" id="player-x-name">Người chơi X</p>
+                <p class="status" id="player-x-status"></p>
+              </div>
+            </div>
+            <div class="player-card" data-mark="o">
+              <span class="mark">O</span>
+              <div class="info">
+                <p class="name" id="player-o-name">Người chơi O</p>
+                <p class="status" id="player-o-status"></p>
+              </div>
+            </div>
+            <div class="timer-panel">
+              <p>Lượt hiện tại:</p>
+              <p id="turn-indicator" class="turn-indicator">-</p>
+              <p id="turn-countdown" class="countdown">30s</p>
+            </div>
+            <div class="chat-panel">
+              <h3>Trò chuyện</h3>
+              <div id="chat-messages" class="chat-messages"></div>
+              <form id="chat-form">
+                <input id="chat-input" type="text" maxlength="200" placeholder="Nhập tin nhắn..." autocomplete="off" />
+                <button type="submit">Gửi</button>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <div id="invite-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h3>Lời mời thi đấu</h3>
+        <p id="invite-text"></p>
+        <div class="modal-actions">
+          <button id="invite-accept" class="primary eq-button">Chấp nhận</button>
+          <button id="invite-decline" class="secondary eq-button">Từ chối</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast-container" aria-live="polite"></div>
+
+    <div id="lobby-chat" class="floating-chat hidden" aria-live="polite">
+      <div class="floating-header">
+        <span class="floating-title">global_chat_testing_panel</span>
+      </div>
+      <div class="floating-body">
+        <div id="lobby-chat-messages" class="floating-messages"></div>
+        <form id="lobby-chat-form" class="floating-form">
+          <input id="lobby-chat-input" type="text" maxlength="240" placeholder="Nhập tin nhắn..." autocomplete="off" />
+          <button type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+
+    <template id="user-row-template">
+      <li class="user-row">
+        <div class="avatar"></div>
+        <div class="details">
+          <p class="username"></p>
+          <p class="meta"></p>
+        </div>
+        <button class="invite-button">Mời</button>
+      </li>
+    </template>
+
+    <script src="scripts.js" type="module"></script>
+  </body>
+</html>
