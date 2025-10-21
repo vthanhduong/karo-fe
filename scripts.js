@@ -1,3 +1,6 @@
+// This file is kept for backward compatibility.
+// The frontend logic now lives under src/js/*. See src/js/main.js for the entry point.
+
 const BOARD_SIZE = 17;
 const SEARCH_DEBOUNCE = 300;
 const BACKEND_PORT = 8000;
