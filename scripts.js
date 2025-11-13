@@ -119,7 +119,7 @@ function formatTimeLabel(isoString) {
 
 const wsUrl = (() => {
   const protocol = location.protocol === "https:" ? "wss" : "ws";
-  return `${protocol}://karo-be.onrender.com/ws`;
+  return `${protocol}://karo-be.nytx.io.vn/ws`;
   // return `${protocol}://${location.hostname}:${BACKEND_PORT}/ws`;
 })();
 
