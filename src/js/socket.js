@@ -5,7 +5,7 @@ import { showToast } from "./ui.js";
 
 function getWsUrl() {
   const protocol = location.protocol === "https:" ? "wss" : "ws";
-  return `${protocol}://karo-be.onrender.com/ws`;
+  return `${protocol}://karo-be.nytx.io.vn/ws`;
 }
 
 export function connect(name) {
