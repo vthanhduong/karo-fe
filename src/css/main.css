@@ -12,6 +12,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.cached-error-question {
+  width: 1px;
+}
+
 * {
   box-sizing: border-box;
 }
