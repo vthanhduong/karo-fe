@@ -1,10 +1,10 @@
-import { BACKEND_PORT } from "./settings.js";
 import { state } from "./context.js";
 import { handleDisconnect, handleMessage } from "./handlers.js";
 import { showToast } from "./ui.js";
 
 function getWsUrl() {
   const protocol = location.protocol === "https:" ? "wss" : "ws";
+  // WHAT THE FUCK IS HAPPENING?!
   return `${protocol}://karo-be.nytx.space/ws`;
 }
 
