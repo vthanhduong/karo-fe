@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -12,10 +12,17 @@
       <section id="login-screen" class="screen">
         <div class="panel">
           <h1>karo brother-hút</h1>
-          <p>created by vtduong from huit-brotherhood</p>
+          <p>created by vtduong from huit-brotherhood bobobo</p>
           <p class="subtitle">Chọn một tên hiển thị để vào lobby.</p>
           <form id="login-form">
-            <input id="name-input" type="text" maxlength="20" placeholder="Nhập tên (3-20 ký tự)" autocomplete="off" required />
+            <input
+              id="name-input"
+              type="text"
+              maxlength="20"
+              placeholder="Nhập tên (3-20 ký tự)"
+              autocomplete="off"
+              required
+            />
             <button type="submit">Vào</button>
             <p id="login-error" class="error"></p>
           </form>
@@ -33,7 +40,12 @@
         </header>
         <div class="lobby-layout">
           <div class="lobby-controls">
-            <input id="search-input" type="text" placeholder="Tìm người chơi" autocomplete="off" />
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Tìm người chơi"
+              autocomplete="off"
+            />
           </div>
           <ul id="user-list" class="user-list"></ul>
         </div>
@@ -48,7 +60,12 @@
           <button id="leave-game-button" class="secondary">Đầu hàng</button>
         </header>
         <div class="game-layout">
-          <div id="board" class="board-grid" role="grid" aria-label="Bàn cờ caro"></div>
+          <div
+            id="board"
+            class="board-grid"
+            role="grid"
+            aria-label="Bàn cờ caro"
+          ></div>
           <aside class="sidebar">
             <div class="player-card" data-mark="x">
               <span class="mark">X</span>
@@ -73,7 +90,13 @@
               <h3>Trò chuyện</h3>
               <div id="chat-messages" class="chat-messages"></div>
               <form id="chat-form">
-                <input id="chat-input" type="text" maxlength="200" placeholder="Nhập tin nhắn..." autocomplete="off" />
+                <input
+                  id="chat-input"
+                  type="text"
+                  maxlength="200"
+                  placeholder="Nhập tin nhắn..."
+                  autocomplete="off"
+                />
                 <button type="submit">Gửi</button>
               </form>
             </div>
@@ -87,8 +110,12 @@
         <h3>Lời mời thi đấu</h3>
         <p id="invite-text"></p>
         <div class="modal-actions">
-          <button id="invite-accept" class="primary eq-button">Chấp nhận</button>
-          <button id="invite-decline" class="secondary eq-button">Từ chối</button>
+          <button id="invite-accept" class="primary eq-button">
+            Chấp nhận
+          </button>
+          <button id="invite-decline" class="secondary eq-button">
+            Từ chối
+          </button>
         </div>
       </div>
     </div>
@@ -98,12 +125,26 @@
     <div id="lobby-chat" class="floating-chat hidden" aria-live="polite">
       <div class="floating-header">
         <span class="floating-title">global_chat_testing_panel</span>
-        <button id="lobby-chat-toggle" class="floating-toggle" type="button" aria-expanded="true" aria-label="Thu nhỏ chat">›</button>
+        <button
+          id="lobby-chat-toggle"
+          class="floating-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-label="Thu nhỏ chat"
+        >
+          ›
+        </button>
       </div>
       <div class="floating-body">
         <div id="lobby-chat-messages" class="floating-messages"></div>
         <form id="lobby-chat-form" class="floating-form">
-          <input id="lobby-chat-input" type="text" maxlength="240" placeholder="Nhập tin nhắn..." autocomplete="off" />
+          <input
+            id="lobby-chat-input"
+            type="text"
+            maxlength="240"
+            placeholder="Nhập tin nhắn..."
+            autocomplete="off"
+          />
           <button type="submit">Gửi</button>
         </form>
       </div>
